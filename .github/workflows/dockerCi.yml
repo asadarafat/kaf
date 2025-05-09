@@ -5,6 +5,10 @@ on:
     types: [published]
   workflow_dispatch:  # 👈 Allow manual execution
 
+pull_request:
+  branches:
+    - development   # ← Only PRs targeting this branch trigger the workflow
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
