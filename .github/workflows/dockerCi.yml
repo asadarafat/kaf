@@ -5,9 +5,9 @@ on:
     types: [published]
   workflow_dispatch:  # 👈 Allow manual execution
 
-pull_request:
+push:
   branches:
-    - development   # ← Only PRs targeting this branch trigger the workflow
+    - dev   # ← Only PRs targeting this branch trigger the workflow
 
 env:
   REGISTRY: ghcr.io
