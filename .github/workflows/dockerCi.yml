@@ -76,6 +76,10 @@ jobs:
           RUN curl https://raw.githubusercontent.com/birdayz/kaf/master/godownloader.sh | BINDIR=/usr/local/bin bash
 
           USER admin
+
+          # Long-lived bash entrypoint
+          ENTRYPOINT ["/bin/bash"]
+
           EOF
 
       - name: Log in to GitHub Container Registry
